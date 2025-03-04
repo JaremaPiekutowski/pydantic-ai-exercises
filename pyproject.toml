@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "pydantic-ai-exercises"
+version = "0.1.0"
+description = "Exercises and examples for working with pydantic-ai"
+authors = ["Jarema Piekutowski <jarema.piekutowski@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pydantic-ai = "*"
+pydantic = "*"
+nest-asyncio = "*"
+python-dotenv = "*"
+jupyter = "*"
+ipykernel = "*"
+griffe = "*"
+
+# Model providers
+openai = "*"
+google-generativeai = "*"
+anthropic = "*"
+groq = "*"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "*"
+isort = "*"
+mypy = "*"
+pytest = "*"
+pytest-asyncio = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 119
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
